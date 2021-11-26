@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    adminAddresses: http://localhost:15672
+    username: guest
+    password: guest
+javainuse:
+  rabbitmq:
+    exchange: user_test_exchange
+    queue: user_test_queue
+    routingkey: user_test_routingkey
+  datasource:
+    url: jdbc:h2:mem:testdb
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+      generate-ddl: true
+      hibernate:
+      ddl-auto: update
